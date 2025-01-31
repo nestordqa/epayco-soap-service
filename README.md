@@ -1,26 +1,38 @@
-# Epayco API SOAP
+# 🌟 Epayco API SOAP 🌟
 
-Bienvenido a la documentación de la API SOAP Epayco, una solución robusta para gestionar clientes y pagos utilizando Node.js, Express, node-soap y MongoDB. Esta API permite registrar clientes, procesar pagos, recargar monederos y confirmar transacciones de manera eficiente.
+¡Bienvenido a la documentación de la **API SOAP Epayco**! 🎉  
+Esta solución ha sido diseñada para ofrecer una experiencia robusta y eficiente en la gestión de clientes y pagos. Desarrollada con tecnologías modernas como **Node.js**, **Express**, **node-soap** y **MongoDB**, esta API permite realizar operaciones clave como registrar clientes, procesar pagos, recargar wallets y confirmar transacciones de manera ágil y segura.
 
-## Tabla de Contenidos
+---
 
-- [Instalación](#instalación)
-- [Variables de Entorno](#variables-de-entorno)
-- [Scripts](#scripts)
-- [Uso](#uso)
-- [Documentación Swagger](#documentación-swagger)
+## 📚 Tabla de Contenidos
 
-## Instalación
+- [🚀 Instalación](#-instalación)
+- [⚙️ Variables de Entorno](#️-variables-de-entorno)
+- [📜 Scripts](#-scripts)
+- [🛠️ Uso](#️-uso)
+- [📖 Documentación Swagger](#-documentación-swagger)
 
-Para comenzar con este proyecto, clona el repositorio e instala las dependencias:
+---
 
-```bash
-git clone https://github.com/nestordqa/epayco-soap-service.git
-cd epayco-soap-service
-npm install
-```
+## 🚀 Instalación
 
-## Variables de Entorno
+Para comenzar con este proyecto, sigue los pasos a continuación:
+
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/nestordqa/epayco-soap-service.git
+   cd epayco-soap-service
+   ```
+
+2. **Instala las dependencias necesarias**:
+   ```bash
+   npm install
+   ```
+
+---
+
+## ⚙️ Variables de Entorno
 
 Antes de ejecutar la aplicación, es necesario configurar las variables de entorno. Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
@@ -41,29 +53,31 @@ PORT=3000
 ### Nota:
 Si necesitas probar el servicio de envío de correos electrónicos, asegúrate de cambiar estas variables según sea necesario.
 
-## Scripts
+---
+
+## 📜 Scripts
 
 Puedes usar los siguientes scripts para gestionar tu aplicación:
 
-- Para iniciar la aplicación **sin Docker**:
+- **Iniciar la aplicación sin Docker**:
+   ```bash
+   npm start
+   ```
 
-```bash
-npm start
-```
+- **Ejecutar la aplicación con Docker**:
+   ```bash
+   npm run docker:up  # Iniciar contenedores
+   npm run docker:down  # Detener contenedores
+   ```
 
-- Para ejecutar la aplicación **con Docker**:
+---
 
-```bash
-npm run docker:up  # Iniciar contenedores
-npm run docker:down  # Detener contenedores
-```
-
-## Uso
+## 🛠️ Uso
 
 Una vez que la aplicación esté en funcionamiento, puedes acceder a los endpoints API. La API soporta las siguientes funcionalidades:
 
 1. **Registrar un Cliente**: `POST /api/registerClient`
-2. **Recargar Monedero**: `POST /api/rechargeWallet`
+2. **Recargar wallet**: `POST /api/rechargeWallet`
 3. **Realizar un Pago**: `POST /api/payment`
 4. **Confirmar Pago**: `POST /api/confirmPayment`
 5. **Consultar Saldo**: `POST /api/checkBalance`
@@ -71,10 +85,14 @@ Una vez que la aplicación esté en funcionamiento, puedes acceder a los endpoin
 7. **Obtener Pagos por ID del Cliente**: `GET /api/payments/client/{clientId}`
 8. **Obtener Todos los Pagos**: `GET /api/payments`
 
-### Documentación Swagger
+---
+
+## 📖 Documentación Swagger
 
 Después de iniciar la aplicación, puedes ver la documentación API a través de Swagger en:
 
 ```
 http://localhost:3000/api-docs/
 ```
+
+---
