@@ -6,7 +6,7 @@ dotenv.config();
 
 const { EMAIL_USER, EMAIL_PASS } = process.env;
 
-// Configuración del transportador
+// Transporte config
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Función para enviar el correo electrónico
+// Function for email sending
 export const sendEmail = async (to: string, subject: string, text: string) => {
     try {
         await transporter.sendMail({
