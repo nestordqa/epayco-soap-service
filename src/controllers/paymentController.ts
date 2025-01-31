@@ -53,9 +53,6 @@ export const makePayment = async (req: Request, res: Response): Promise<void> =>
         });
         
         await payment.save();
-
-        // Deduct the payment amount from the client's balance
-        client.balance -= amount;
         await client.save();
 
         // Send the token to the client's email
